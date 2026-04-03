@@ -1,0 +1,1 @@
+Si agregás más proyectos en el futuro, solo necesitás añadir las claves correspondientes en el objeto translations y los atributos data-i18n en el HTML.
