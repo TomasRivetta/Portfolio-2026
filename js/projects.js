@@ -156,6 +156,32 @@ const projects = [
         ],
         link: 'https://cuentas-claras-dun.vercel.app/'
     },
+{
+    id: 'pulsoFit',
+    image: 'assets/pulsoFit.png',
+    imageAlt: {
+        es: 'Aplicación web PulsoFit',
+        en: 'PulsoFit web application'
+    },
+    title: {
+        es: 'PulsoFit – App de seguimiento de actividad física',
+        en: 'PulsoFit – Fitness activity tracking app'
+    },
+    type: {
+        es: 'Aplicación web',
+        en: 'Web application'
+    },
+    desc: {
+        es: 'PulsoFit es una aplicación web diseñada para ayudar a los usuarios a realizar un seguimiento de su actividad física y mantener una rutina de entrenamiento más organizada. Permite visualizar entrenamientos, registrar avances y acceder a una experiencia clara, dinámica y responsiva. El proyecto está enfocado en la usabilidad, el diseño moderno y la motivación del usuario, demostrando habilidades en desarrollo frontend, manejo de componentes y construcción de interfaces centradas en la experiencia de uso.',
+        en: 'PulsoFit is a web application designed to help users track their physical activity and maintain a more organized workout routine. It allows users to view workouts, log progress, and enjoy a clear, dynamic, and responsive experience. The project focuses on usability, modern design, and user motivation, showcasing frontend development skills, component-based architecture, and user-centered interface design.'
+    },
+    tags: [
+        { name: 'React', color: 'orange' },
+        { name: 'Tailwind CSS', color: 'blue' },
+        { name: 'TypeScript', color: 'yellow' }
+    ],
+    link: 'https://pulso-fit.vercel.app/login'
+},
 ];
 
 function renderProjects(lang, previewText) {
