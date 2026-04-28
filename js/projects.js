@@ -182,6 +182,34 @@ const projects = [
     ],
     link: 'https://pulso-fit.vercel.app/login'
 },
+{
+  id: 'CompaPc',
+  image: 'assets/compaPc.png',
+  imageAlt: {
+    es: 'Aplicación web CompaPC',
+    en: 'CompaPC web application'
+  },
+  title: {
+    es: 'CompaPC – Comparador de precios de hardware',
+    en: 'CompaPC – Hardware price comparison platform'
+  },
+  type: {
+    es: 'Aplicación web',
+    en: 'Web application'
+  },
+  desc: {
+    es: 'CompaPC es una aplicación web que permite comparar precios de componentes de PC en distintas tiendas de Argentina. Centraliza información obtenida mediante scraping y APIs, normalizando productos para facilitar la búsqueda y comparación. El sistema está diseñado con una arquitectura modular que separa scraper, backend y frontend, permitiendo escalar la incorporación de nuevas tiendas. El proyecto destaca el manejo de datos reales, integración de servicios y construcción de interfaces enfocadas en la experiencia del usuario.',
+    en: 'CompaPC is a web application that allows users to compare prices of PC hardware components across different stores in Argentina. It aggregates data using scraping and APIs, normalizing products to enable efficient search and comparison. The system is built with a modular architecture separating scrapers, backend, and frontend, making it scalable for adding new stores. The project highlights real data handling, service integration, and user-focused interface design.'
+  },
+  tags: [
+    { name: 'Next.js', color: 'black' },
+    { name: 'TypeScript', color: 'blue' },
+    { name: 'Tailwind CSS', color: 'cyan' },
+    { name: 'FastAPI', color: 'green' },
+    { name: 'Python', color: 'yellow' }
+  ],
+  link: 'https://compa-pc.vercel.app/'
+}
 ];
 
 function renderProjects(lang, previewText) {
