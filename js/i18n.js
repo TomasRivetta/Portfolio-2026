@@ -16,7 +16,7 @@ const translations = {
         contactMe: 'Contáctame',
         // About
         aboutTitle: 'Sobre mí',
-        aboutP1: 'Desarrollador Full Stack Técnico en Programación de Córdoba, Argentina.',
+        aboutP1: 'Desarrollador Python Técnico en Programación de Córdoba, Argentina.',
         aboutP2: 'Durante mi formación académica, he trabajado en proyectos que integran backend robusto con interfaces dinámicas, aplicando patrones de diseño y buenas prácticas de desarrollo. Me enfoco en escribir código limpio, mantenible y escalable.',
         aboutP3: 'Disfruto resolver problemas complejos y transformarlos en soluciones funcionales. Me interesa especialmente la arquitectura de software y cómo diseñar sistemas que respondan de manera eficiente a las necesidades del usuario.',
         aboutP4: 'Además de programar, me gusta mantenerme actualizado sobre las últimas tendencias en tecnología, contribuir en comunidades de desarrollo y compartir conocimiento con otros estudiantes.',
@@ -80,8 +80,8 @@ const translations = {
         // Hero
         availableTag: 'Available for new projects',
         heroGreeting: 'Hey, I\'m Tomas',
-        heroRole: 'Full Stack Developer',
-        heroDesc: 'University Technician in Programming from Córdoba, Argentina. Specialized in web application development with <strong class="text-primary font-semibold">Angular</strong>, <strong class="text-primary font-semibold">Java</strong>, <strong class="text-primary font-semibold">Spring Boot</strong>, <strong class="text-primary font-semibold">TypeScript</strong>, <strong class="text-primary font-semibold">among others</strong>.',
+        heroRole: 'Python Developer',
+        heroDesc: 'University Technician in Programming from Córdoba, Argentina. Specialized in web application development with <strong class="text-primary font-semibold">Python</strong>, <strong class="text-primary font-semibold">Django</strong>, <strong class="text-primary font-semibold">FastAPI</strong>, <strong class="text-primary font-semibold">PostgreSQL</strong>, <strong class="text-primary font-semibold">among others</strong>.',
         viewProjects: 'View Projects',
         contactMe: 'Contact Me',
         // About
@@ -106,7 +106,7 @@ const translations = {
         jobCompany: 'Freelance',
         jobCurrently: 'Currently',
         jobDesc1: 'Development of web and mobile applications for clients from various sectors.',
-        jobDesc2: 'Use of technologies such as TypeScript, Angular, Java, Spring Boot and SQL and NoSQL databases.',
+        jobDesc2: 'Use of technologies such as Python, Django, FastAPI, Flask and SQL and NoSQL databases.',
         jobDesc3: 'Implementation of REST APIs, user management, roles and contracts.',
         jobDesc4: 'Version control with Git and GitHub, working under Scrum methodology with Jira.',
         eduTitle1: 'University Degree in Programming',
@@ -213,6 +213,10 @@ function setLanguage(lang) {
     
     if (document.getElementById('projects-grid')) {
         renderProjects(lang, t.preview);
+    }
+
+    if (document.getElementById('experience-grid') && typeof renderExperience === 'function') {
+        renderExperience(lang);
     }
 
     // Contact

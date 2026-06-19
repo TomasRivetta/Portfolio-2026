@@ -19,10 +19,10 @@ const projects = [
             en: 'Web platform that connects clients with service professionals. User management, roles, contracts, availability and payments. Full stack development with Angular (frontend) and Java with Spring Boot (backend). Data persistence with PostgreSQL.'
         },
         tags: [
-            { name: 'Angular', color: 'red' },
+            { name: 'React', color: 'red' },
             { name: 'Tailwind CSS', color: 'teal' },
-            { name: 'Java', color: 'orange' },
-            { name: 'Spring Boot', color: 'green' },
+            { name: 'Python', color: 'orange' },
+            { name: 'Django', color: 'green' },
             { name: 'PostgreSQL', color: 'indigo' }
         ],
         link: '#'
@@ -82,8 +82,8 @@ const projects = [
         id: 'csharp',
         image: 'assets/proyectoCSharp.png',
         imageAlt: {
-            es: 'Proyecto Final del curso de C# de CoderHouse',
-            en: 'Final project of the C# course of CoderHouse'
+            es: 'Proyecto Final del curso de Python de CoderHouse',
+            en: 'Final project of the Python course of CoderHouse'
         },
         title: {
             es: 'Proyecto Final del curso de C# de CoderHouse',
@@ -94,9 +94,9 @@ const projects = [
             en: 'Final project – Coder House, course of c#'
         },
         desc: {
-            es: 'Sistema de gestión desarrollado en C# y .NET como proyecto final de Coderhouse. Permite administrar entidades, operaciones y flujos de negocio mediante una arquitectura orientada a objetos y persistencia de datos. Incluye funcionalidades CRUD, validaciones y lógica de negocio aplicada en un caso real de gestión. Calificacion final del proyecto: 10.',
-            en: 'Management system developed in C# and .NET as a final project for Coderhouse. It allows the administration of entities, operations, and business flows through an object-oriented architecture and data persistence. It includes CRUD functionalities, validations, and business logic applied in a real-world management scenario.  Final project grade: 10.'
-        },
+                    es: 'Sistema de gestión desarrollado en Python y Flask como proyecto final de Coderhouse. Permite administrar entidades, operaciones y flujos de negocio mediante una arquitectura orientada a objetos y persistencia de datos. Incluye funcionalidades CRUD, validaciones y lógica de negocio aplicada en un caso real de gestión. Calificacion final del proyecto: 10.',
+                    en: 'Management system developed in Python and Flask as a final project for Coderhouse. It allows the administration of entities, operations, and business flows through an object-oriented architecture and data persistence. It includes CRUD functionalities, validations, and business logic applied in a real-world management scenario.  Final project grade: 10.'
+                },
         tags: [
             { name: 'C#', color: 'red' },
             { name: '.NET', color: 'teal' },
@@ -253,4 +253,6 @@ function renderProjects(lang, previewText) {
             </div>
         </article>
     `).join('');
+}
+');
 }

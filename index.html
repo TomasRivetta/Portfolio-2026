@@ -1,473 +1,549 @@
 <!DOCTYPE html>
-<html lang="es" style="scroll-behavior: smooth;">
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta name="description" content="Portafolio web de Tomas Rivetta, Desarrollador Full Stack. Conoce mi experiencia, habilidades y proyectos con Angular, Java y Spring Boot." />
-  <title>Tomas Rivetta | Full Stack Developer | Angular | Java | Spring Boot</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="assets/favicon.svg">
-  <script>
-    (function () {
-      const theme = localStorage.getItem('theme');
-      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      }
-    })();
-  </script>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script src="js/tailwind.config.js"></script>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display antialiased selection:bg-primary selection:text-white">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-border-dark bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex items-center gap-2">
-          <div class="size-8 text-primary flex items-center justify-center bg-primary/10 rounded-lg">
-            <span class="material-symbols-outlined text-2xl">code</span>
-          </div>
-          <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Tomas Rivetta</span>
-        </div>
-        <nav class="hidden md:flex items-center gap-8">
-          <a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#sobre-mi" data-i18n="navAbout">Sobre mí</a>
-          <a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#skills" data-i18n="navSkills">Skills</a>
-          <a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#trayectoria" data-i18n="navTrajectory">Trayectoria</a>
-          <a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#proyectos" data-i18n="navProjects">Proyectos</a>
-          <a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#contacto" data-i18n="navContact">Contacto</a>
-        </nav>
-        <div class="flex items-center gap-4">
-          <button id="lang-toggle" aria-label="Cambiar idioma" class="p-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-surface-dark font-semibold text-sm">
-            <span id="lang-indicator">ES</span>
-          </button>
-          <button id="theme-toggle" aria-label="Cambiar tema oscuro o claro" class="p-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-surface-dark">
-            <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
-            <span class="material-symbols-outlined hidden dark:block">light_mode</span>
-          </button>
-          <button class="hidden sm:flex items-center justify-center gap-2 px-4 py-2 bg-primary hover:bg-primary-dark text-white text-sm font-semibold rounded-lg transition-all shadow-lg shadow-primary/20">
-            <span class="material-symbols-outlined text-[20px]">
-              <a href="https://flowcv.com/resume/ev9vd4h1sdsc" target="_blank" aria-label="Descargar curriculum vitae"><span>Download</span>
-            </span>
-            <span data-i18n="downloadCV">Download CV</span></a>
-          </button>
-          <button class="md:hidden p-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white" aria-label="Abrir menú de navegación">
-            <span class="material-symbols-outlined">menu</span>
-          </button>
-        </div>
-      </div>
+  <title>Tomas Rivetta | Python Developer | Backend | FastAPI</title>
+
+  <meta
+    name="description"
+    content="Portafolio web de Tomas Rivetta, Python Developer especializado en backend, automatización, extracción de datos y APIs REST con FastAPI, Django y PostgreSQL."
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    *{
+      font-family: 'Inter', sans-serif;
+    }
+
+    body{
+      background:#0b1120;
+      color:white;
+    }
+
+    .gradient-text{
+      background: linear-gradient(to right, #38bdf8, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card{
+      background:#111827;
+      border:1px solid #1f2937;
+    }
+
+    .skill-badge{
+      padding: 0.5rem 1rem;
+      border-radius: 0.75rem;
+      background: #1e293b;
+      border: 1px solid #334155;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #cbd5e1;
+      display:flex;
+      align-items:center;
+      gap:0.5rem;
+    }
+
+    .glow{
+      box-shadow: 0 0 50px rgba(56,189,248,.15);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="fixed top-0 w-full backdrop-blur border-b border-slate-800 z-50 bg-[#0b1120]/80">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <h1 class="text-xl font-bold">
+        Tomas Rivetta
+      </h1>
+
+      <nav class="hidden md:flex gap-8 text-sm text-slate-300">
+        <a href="#sobre-mi" class="hover:text-sky-400 transition">Sobre mí</a>
+        <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+        <a href="#experiencia" class="hover:text-sky-400 transition">Experiencia</a>
+        <a href="#proyectos" class="hover:text-sky-400 transition">Proyectos</a>
+        <a href="#contacto" class="hover:text-sky-400 transition">Contacto</a>
+      </nav>
+
     </div>
   </header>
 
-  <!-- Main -->
-  <main class="flex-grow flex flex-col">
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center pt-32 pb-20 px-6">
 
-    <!-- Hero -->
-    <section class="relative pt-20 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
-      <div class="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/4"></div>
-      <div class="absolute bottom-0 left-0 -z-10 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/4"></div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          <div class="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left space-y-8">
-            <div class="space-y-4">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
-                <span class="relative flex h-2 w-2">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                </span>
-                <span data-i18n="availableTag">Disponible para nuevos proyectos</span>
-              </div>
-              <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]" data-i18n="heroGreeting">
-                Hey, soy Tomas <br />
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Full Stack Developer</span>
-              </h1>
-              <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed" data-i18n="heroDesc">
-                Técnico Universitario en Programación de Córdoba, Argentina. Especializado en el desarrollo de aplicaciones web con
-                <strong class="text-primary font-semibold">Angular</strong>,
-                <strong class="text-primary font-semibold">Java</strong>,
-                <strong class="text-primary font-semibold">Spring Boot</strong>,
-                <strong class="text-primary font-semibold">TypeScript</strong> y
-                <strong class="text-primary font-semibold">Entre otras</strong>.
-              </p>
-            </div>
-            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-              <a href="#proyectos" class="h-12 px-8 rounded-lg bg-primary hover:bg-primary-dark text-white font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all transform hover:-translate-y-0.5 inline-flex items-center" data-i18n="viewProjects">
-                Ver Proyectos
-              </a>
-              <a href="mailto:totorivetta@gmail.com" class="h-12 px-8 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-primary dark:hover:border-primary text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary font-semibold transition-all bg-transparent hover:bg-primary/5 inline-flex items-center" data-i18n="contactMe">
-                Contáctame
-              </a>
-            </div>
-            <div class="flex items-center gap-6 pt-4 border-t border-slate-200 dark:border-border-dark w-full justify-center lg:justify-start">
-              <a class="group flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors" href="https://github.com/TomasRivetta" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de GitHub">
-                <div class="p-2 rounded-full bg-slate-100 dark:bg-surface-dark group-hover:bg-slate-200 dark:group-hover:bg-slate-800 transition-colors">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-                </div>
-                <span class="font-medium">GitHub</span>
-              </a>
-              <a class="group flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors" href="https://www.linkedin.com/in/tomasrivetta-fullstack/" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de LinkedIn">
-                <div class="p-2 rounded-full bg-slate-100 dark:bg-surface-dark group-hover:bg-slate-200 dark:group-hover:bg-slate-800 transition-colors">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                </div>
-                <span class="font-medium">LinkedIn</span>
-              </a>
-            </div>
-          </div>
-          <div class="flex-1 w-full max-w-[500px] lg:max-w-none relative group">
-            <div class="absolute -inset-1 bg-gradient-to-r from-primary to-blue-400 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-            <div class="relative w-full aspect-square lg:aspect-[4/3] rounded-2xl overflow-hidden bg-surface-dark border border-border-dark shadow-2xl">
-              <img alt="Abstract code on a computer screen representing software development" width="600" height="450" fetchpriority="high" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500 hover:scale-105 transform" src="assets/foto mia.webp" />
-              <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-dark/90 to-transparent">
-                <div class="flex gap-2 mb-2">
-                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <div class="font-mono text-xs text-primary-dark font-bold bg-black/50 inline-block px-2 py-1 rounded mb-1">
-                  $ git commit -m "Initial commit"
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
-    <!-- Sobre mí -->
-    <section id="sobre-mi" class="py-16 bg-slate-50 dark:bg-[#121212]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="aboutTitle">Sobre mí</h2>
-        </div>
-        <div class="max-w-3xl mx-auto space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-          <p data-i18n="aboutP1">Desarrollador Full Stack cursando la Tecnicatura Universitaria en Programación en la UTN FRC.</p>
-          <p data-i18n="aboutP2">Durante mi formación académica, he trabajado en proyectos que integran backend robusto con interfaces dinámicas, aplicando patrones de diseño y buenas prácticas de desarrollo. Me enfoco en escribir código limpio, mantenible y escalable.</p>
-          <p data-i18n="aboutP3">Disfruto resolver problemas complejos y transformarlos en soluciones funcionales. Me interesa especialmente la arquitectura de software y cómo diseñar sistemas que respondan de manera eficiente a las necesidades del usuario.</p>
-          <p data-i18n="aboutP4">Además de programar, me gusta mantenerme actualizado sobre las últimas tendencias en tecnología, contribuir en comunidades de desarrollo y compartir conocimiento con otros estudiantes.</p>
-        </div>
-      </div>
-    </section>
+      <div>
 
-    <!-- Skills -->
-    <section id="skills" class="py-16 bg-white dark:bg-[#0f1219]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="skillsTitle">Stack Tecnológico</h2>
-          <p class="text-slate-600 dark:text-slate-400" data-i18n="skillsSubtitle">Tecnologías y herramientas que utilizo para construir soluciones</p>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-sm mb-8">
+          <div class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></div>
+          Disponible para nuevos proyectos
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Frontend -->
-          <div class="bg-slate-50 dark:bg-surface-dark p-8 rounded-2xl border border-slate-200 dark:border-border-dark">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="material-symbols-outlined text-primary text-3xl">html</span>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white" data-i18n="skillsFrontend">Frontend</h3>
-            </div>
-            <div class="flex flex-wrap gap-3">
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-primary"></span> Angular
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-primary"></span> React
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-primary"></span> TypeScript
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-primary"></span> Tailwind CSS
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-primary"></span> Bootstrap
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-primary"></span> Astro
-              </div>
-            </div>
-          </div>
-          <!-- Backend -->
-          <div class="bg-slate-50 dark:bg-surface-dark p-8 rounded-2xl border border-slate-200 dark:border-border-dark">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="material-symbols-outlined text-purple-500 text-3xl">terminal</span>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white" data-i18n="skillsBackend">Backend</h3>
-            </div>
-            <div class="flex flex-wrap gap-3">
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-purple-500"></span> Java
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-purple-500"></span> Spring Boot
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-purple-500"></span> APIs REST
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-purple-500"></span> Python
-              </div>
-                            <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-purple-500"></span> C#
-              </div>
-                            <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-purple-500"></span> .NET
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-purple-500"></span> JUnit
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-purple-500"></span> Mockito
-              </div>
-            </div>
-          </div>
-          <!-- Base de Datos -->
-          <div class="bg-slate-50 dark:bg-surface-dark p-8 rounded-2xl border border-slate-200 dark:border-border-dark">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="material-symbols-outlined text-emerald-500 text-3xl">database</span>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white" data-i18n="skillsDatabase">Base de Datos</h3>
-            </div>
-            <div class="flex flex-wrap gap-3">
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> PostgreSQL
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> SQL Server
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> MongoDB
-              </div>
-            </div>
-          </div>
-          <!-- Herramientas -->
-          <div class="bg-slate-50 dark:bg-surface-dark p-8 rounded-2xl border border-slate-200 dark:border-border-dark">
-            <div class="flex items-center gap-3 mb-6">
-              <span class="material-symbols-outlined text-orange-500 text-3xl">build</span>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white" data-i18n="skillsTools">Herramientas</h3>
-            </div>
-            <div class="flex flex-wrap gap-3">
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-orange-500"></span> Git &amp; GitHub
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-orange-500"></span> Docker
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-orange-500"></span> Jira
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-orange-500"></span> Figma
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-orange-500"></span> Postman
-              </div>
-              <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium text-sm flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-orange-500"></span> SCRUM
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Trayectoria -->
-    <section class="py-16 bg-slate-50 dark:bg-[#121212]" id="trayectoria">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="trajectoryTitle">Trayectoria</h2>
-          <p class="text-slate-600 dark:text-slate-400" data-i18n="trajectorySubtitle">Mi formación académica y experiencia profesional</p>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <!-- Experiencia -->
-          <div class="space-y-8">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="p-2 bg-blue-100 dark:bg-blue-900/20 rounded-lg text-primary">
-                <span class="material-symbols-outlined">work</span>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white" data-i18n="experienceTitle">Experiencia</h3>
-            </div>
-            <div class="relative space-y-6 pl-2">
-              <div class="absolute left-2 top-2 bottom-2 w-0.5 bg-slate-200 dark:bg-border-dark"></div>
-              <div class="relative pl-8">
-                <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full border-2 border-primary bg-white dark:bg-surface-dark"></div>
-                <div class="bg-white dark:bg-surface-dark p-6 rounded-xl border border-slate-200 dark:border-border-dark shadow-sm hover:shadow-md transition-shadow">
-                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <h4 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="jobTitle">Desarrollador Full Stack</h4>
-                    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary w-fit" data-i18n="jobCurrently">Actualmente</span>
-                  </div>
-                  <p class="text-slate-700 dark:text-slate-300 font-medium mb-3" data-i18n="jobCompany">Freelance</p>
-                  <ul class="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
-                    <li data-i18n="jobDesc1">Desarrollo de aplicaciones web y móviles para clientes de diversos sectores.</li>
-                    <li data-i18n="jobDesc2">Uso de tecnologías como TypeScript, Angular, Java, Spring Boot y bases de datos SQL y NoSQL.</li>
-                    <li data-i18n="jobDesc3">Implementación de APIs REST, gestión de usuarios, roles y contratos.</li>
-                    <li data-i18n="jobDesc4">Control de versiones con Git y GitHub, trabajo bajo metodología Scrum con Jira.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Educación -->
-          <div class="space-y-8">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="p-2 bg-emerald-100 dark:bg-emerald-900/20 rounded-lg text-emerald-600 dark:text-emerald-400">
-                <span class="material-symbols-outlined">school</span>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white" data-i18n="educationTitle">Educación</h3>
-            </div>
-            <div class="relative space-y-6 pl-2">
-              <div class="absolute left-2 top-2 bottom-2 w-0.5 bg-slate-200 dark:bg-border-dark"></div>
-              <div class="relative pl-8">
-                <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full border-2 border-emerald-500 bg-white dark:bg-surface-dark"></div>
-                <div class="bg-white dark:bg-surface-dark p-6 rounded-xl border border-slate-200 dark:border-border-dark shadow-sm hover:shadow-md transition-shadow">
-                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <h4 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="eduTitle1">Tecnicatura Universitaria en Programación</h4>
-                    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 w-fit">2023 – 2026</span>
-                  </div>
-                  <p class="text-slate-700 dark:text-slate-300 font-medium mb-2" data-i18n="eduInstitution1">Universidad Tecnológica Nacional – F.R.C</p>
-                  <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="eduDesc1">Córdoba, Argentina. Formación en desarrollo de software, algoritmos, estructuras de datos, bases de datos y desarrollo web full stack.</p>
-                </div>
-              </div>
-              <div class="relative pl-8">
-                <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full border-2 border-slate-300 dark:border-slate-600 bg-white dark:bg-surface-dark"></div>
-                <div class="bg-white dark:bg-surface-dark p-6 rounded-xl border border-slate-200 dark:border-border-dark shadow-sm hover:shadow-md transition-shadow">
-                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <h4 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="eduTitle2">Bachiller en Ciencias Naturales</h4>
-                    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 w-fit">2015 – 2020</span>
-                  </div>
-                  <p class="text-slate-700 dark:text-slate-300 font-medium mb-2" data-i18n="eduInstitution2">Instituto Parroquial Bernardo D'Elia</p>
-                  <p class="text-sm text-slate-600 dark:text-slate-400" data-i18n="eduDesc2">Córdoba, Argentina.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight mb-8">
+          Hey, soy Tomas <br/>
+          <span class="gradient-text">
+            Python Developer
+          </span>
+        </h1>
 
-    <!-- Proyectos -->
-    <section id="proyectos" class="py-16 bg-white dark:bg-[#0f1219]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div class="flex flex-col gap-2">
-            <h2 class="text-3xl font-bold text-slate-900 dark:text-white" data-i18n="projectsTitle">Proyectos</h2>
-            <p class="text-slate-600 dark:text-slate-400" data-i18n="projectsSubtitle">Una selección de mis trabajos recientes</p>
-          </div>
-          <a href="pages/projects.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-white font-semibold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 group w-fit">
-            <span data-i18n="viewAllProjects">Ver todos</span>
-            <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        <p class="text-slate-400 text-lg leading-relaxed max-w-2xl mb-10">
+          Python Developer especializado en backend, automatización y extracción de datos.
+          Actualmente trabajo en <span class="text-sky-400 font-semibold">B2Gov</span>,
+          desarrollando pipelines de datos, scrapers y soluciones basadas en el estándar
+          OCDS.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mb-10">
+
+          <a
+            href="#proyectos"
+            class="px-8 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 transition font-semibold"
+          >
+            Ver proyectos
           </a>
-        </div>
-        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-      </div>
-    </section>
 
-    <!-- Contacto -->
-    <section class="py-16 lg:py-24 bg-slate-50 dark:bg-[#121212] relative overflow-hidden" id="contacto">
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-          <div>
-            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6" data-i18n="contactTitle">Trabajemos juntos</h2>
-            <p class="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed" data-i18n="contactDesc">
-              Estoy disponible para trabajos freelance u oportunidades a tiempo completo. Si tenés un proyecto que necesita un toque creativo, o simplemente querés saludar, ¡no dudes en escribirme!
-            </p>
-            <div class="space-y-6">
-              <div class="flex items-start gap-4">
-                <div class="flex-shrink-0 size-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <span class="material-symbols-outlined">mail</span>
-                </div>
-                <div>
-                  <h4 class="text-lg font-semibold text-slate-900 dark:text-white" data-i18n="contactEmail">Email</h4>
-                  <a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="mailto:totorivetta@gmail.com">totorivetta@gmail.com</a>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <div class="flex-shrink-0 size-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <span class="material-symbols-outlined">location_on</span>
-                </div>
-                <div>
-                  <h4 class="text-lg font-semibold text-slate-900 dark:text-white" data-i18n="contactLocation">Ubicacion</h4>
-                  <p class="text-slate-600 dark:text-slate-400">Córdoba, Argentina</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <div class="flex-shrink-0 size-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <span class="material-symbols-outlined">share</span>
-                </div>
-                <div>
-                  <h4 class="text-lg font-semibold text-slate-900 dark:text-white" data-i18n="contactSocial">Redes sociales</h4>
-                  <div class="flex gap-4 mt-2">
-                    <a class="text-slate-500 hover:text-primary transition-colors" href="https://github.com/TomasRivetta" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de GitHub">
-                      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-                    </a>
-                    <a class="text-slate-500 hover:text-primary transition-colors" href="https://www.linkedin.com/in/tomasrivetta-fullstack/" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de LinkedIn">
-                      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white dark:bg-surface-dark p-8 rounded-2xl border border-slate-200 dark:border-border-dark shadow-xl shadow-primary/5">
-            <form class="space-y-6">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="space-y-2">
-                  <label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="name" data-i18n="formName">Nombre</label>
-                  <input class="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-[#121212] border border-slate-200 dark:border-border-dark focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-900 dark:text-white" id="name" placeholder="John Doe" type="text" />
-                </div>
-                <div class="space-y-2">
-                  <label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="email" data-i18n="formEmail">Email</label>
-                  <input class="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-[#121212] border border-slate-200 dark:border-border-dark focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-900 dark:text-white" id="email" placeholder="john@example.com" type="email" />
-                </div>
-              </div>
-              <div class="space-y-2">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="subject" data-i18n="formSubject">Asunto</label>
-                <select class="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-[#121212] border border-slate-200 dark:border-border-dark focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-900 dark:text-white" id="subject">
-                  <option>Inquietud general</option>
-                  <option>Propeusta de proyecto</option>
-                  <option>Trabajo Freelance</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-              <div class="space-y-2">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="message" data-i18n="formMessage">Mensaje</label>
-                <textarea class="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-[#121212] border border-slate-200 dark:border-border-dark focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-slate-900 dark:text-white min-h-[150px] resize-y" id="message" placeholder="Tell me about your project..."></textarea>
-              </div>
-              <button class="w-full py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all transform hover:-translate-y-0.5" type="submit" data-i18n="formSubmit">
-                Enviar mensaje
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+          <a
+            href="mailto:totorivetta@gmail.com"
+            class="px-8 py-4 rounded-xl border border-slate-700 hover:border-sky-400 transition"
+          >
+            Contactarme
+          </a>
 
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-slate-50 dark:bg-background-dark border-t border-slate-200 dark:border-border-dark py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-      <div class="mb-4">
-        <div class="size-8 text-primary flex items-center justify-center bg-primary/10 rounded-lg mx-auto">
-          <span class="material-symbols-outlined text-2xl">code</span>
         </div>
+
+        <div class="flex gap-6">
+
+          <a
+            href="https://github.com/TomasRivetta"
+            target="_blank"
+            class="text-slate-400 hover:text-white transition"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/tomasrivetta-fullstack/"
+            target="_blank"
+            class="text-slate-400 hover:text-white transition"
+          >
+            LinkedIn
+          </a>
+
+        </div>
+
       </div>
-      <p class="text-slate-500 dark:text-slate-500 text-sm mb-6" data-i18n="footerDesigned">Diseñado y desarrollado por Tomas Rivetta</p>
-      <div class="flex gap-4">
-        <a class="text-slate-400 hover:text-primary transition-colors" href="https://github.com/TomasRivetta" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de GitHub">
-          <span class="sr-only">GitHub</span>
-          <svg aria-hidden="true" class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
-        </a>
-        <a class="text-slate-400 hover:text-primary transition-colors" href="https://www.linkedin.com/in/tomasrivetta-fullstack/" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de LinkedIn">
-          <span class="sr-only">LinkedIn</span>
-          <svg aria-hidden="true" class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path></svg>
-        </a>
+
+      <div class="relative">
+
+        <div class="absolute inset-0 bg-sky-500/20 blur-3xl rounded-full"></div>
+
+        <img
+          src="assets/foto mia.webp"
+          alt="Tomas Rivetta"
+          class="relative rounded-3xl border border-slate-700 glow"
+        />
+
       </div>
-      <p class="text-slate-600 dark:text-slate-600 text-xs mt-4" data-i18n="footerRights">© 2026 Tomas Rivetta. Todos los derechos reservados.</p>
+
     </div>
+
+  </section>
+
+  <!-- SOBRE MI -->
+  <section id="sobre-mi" class="py-24 px-6 bg-[#0f172a]">
+
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-16">
+
+        <h2 class="text-4xl font-bold mb-4">
+          Sobre mí
+        </h2>
+
+        <p class="text-slate-400">
+          Backend Developer orientado a automatización y procesamiento de datos
+        </p>
+
+      </div>
+
+      <div class="space-y-8 text-slate-300 text-lg leading-relaxed">
+
+        <p>
+          Soy Python Developer y estudiante de la Tecnicatura Universitaria en Programación
+          en la UTN FRC.
+        </p>
+
+        <p>
+          Actualmente trabajo en <span class="text-sky-400 font-semibold">B2Gov</span>,
+          desarrollando soluciones para procesamiento de datos gubernamentales y licitaciones públicas
+          utilizando el estándar OCDS.
+        </p>
+
+        <p>
+          Trabajo diariamente construyendo scrapers, fetchers, APIs REST y pipelines de datos utilizando
+          Python, FastAPI, PostgreSQL y Docker.
+        </p>
+
+        <p>
+          Me interesa especialmente backend engineering, arquitectura de software,
+          data engineering y sistemas escalables.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-24 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-16">
+
+        <h2 class="text-4xl font-bold mb-4">
+          Stack Tecnológico
+        </h2>
+
+        <p class="text-slate-400">
+          Tecnologías y herramientas que utilizo diariamente
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- BACKEND -->
+        <div class="card rounded-2xl p-8">
+
+          <h3 class="text-2xl font-bold mb-6 text-sky-400">
+            Backend
+          </h3>
+
+          <div class="flex flex-wrap gap-3">
+
+            <div class="skill-badge">Python</div>
+            <div class="skill-badge">FastAPI</div>
+            <div class="skill-badge">Django</div>
+            <div class="skill-badge">Flask</div>
+            <div class="skill-badge">REST APIs</div>
+            <div class="skill-badge">Pytest</div>
+
+          </div>
+
+        </div>
+
+        <!-- DATA -->
+        <div class="card rounded-2xl p-8">
+
+          <h3 class="text-2xl font-bold mb-6 text-emerald-400">
+            Data
+          </h3>
+
+          <div class="flex flex-wrap gap-3">
+
+            <div class="skill-badge">PostgreSQL</div>
+            <div class="skill-badge">MongoDB</div>
+            <div class="skill-badge">Pandas</div>
+            <div class="skill-badge">ETL</div>
+            <div class="skill-badge">Web Scraping</div>
+            <div class="skill-badge">OCDS</div>
+
+          </div>
+
+        </div>
+
+        <!-- DEVOPS -->
+        <div class="card rounded-2xl p-8">
+
+          <h3 class="text-2xl font-bold mb-6 text-orange-400">
+            DevOps
+          </h3>
+
+          <div class="flex flex-wrap gap-3">
+
+            <div class="skill-badge">Docker</div>
+            <div class="skill-badge">Git</div>
+            <div class="skill-badge">GitHub</div>
+            <div class="skill-badge">Linux</div>
+            <div class="skill-badge">CI/CD</div>
+
+          </div>
+
+        </div>
+
+        <!-- FRONTEND -->
+        <div class="card rounded-2xl p-8">
+
+          <h3 class="text-2xl font-bold mb-6 text-purple-400">
+            Frontend
+          </h3>
+
+          <div class="flex flex-wrap gap-3">
+
+            <div class="skill-badge">React</div>
+            <div class="skill-badge">Angular</div>
+            <div class="skill-badge">TypeScript</div>
+            <div class="skill-badge">Tailwind CSS</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia" class="py-24 px-6 bg-[#0f172a]">
+
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-16">
+
+        <h2 class="text-4xl font-bold mb-4">
+          Experiencia
+        </h2>
+
+        <p class="text-slate-400">
+          Trayectoria profesional
+        </p>
+
+      </div>
+
+      <div class="relative border-l border-slate-700 pl-10">
+
+        <div class="absolute w-4 h-4 bg-sky-400 rounded-full -left-2 top-2"></div>
+
+        <div class="card rounded-2xl p-8">
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+
+            <div>
+
+              <h3 class="text-2xl font-bold">
+                Python Developer
+              </h3>
+
+              <p class="text-sky-400 font-semibold">
+                B2Gov
+              </p>
+
+            </div>
+
+            <span class="px-4 py-2 rounded-full bg-sky-500/10 text-sky-400 text-sm w-fit">
+              2026 - Actualidad
+            </span>
+
+          </div>
+
+          <ul class="space-y-4 text-slate-300">
+
+            <li>
+              • Desarrollo y mantenimiento de scrapers y fetchers para extracción de licitaciones públicas.
+            </li>
+
+            <li>
+              • Implementación de releases bajo el estándar OCDS.
+            </li>
+
+            <li>
+              • Automatización de pipelines de procesamiento y normalización de datos.
+            </li>
+
+            <li>
+              • Desarrollo de APIs y herramientas internas utilizando Python y FastAPI.
+            </li>
+
+            <li>
+              • Optimización de procesos de extracción masiva de datos.
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="py-24 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-16">
+
+        <h2 class="text-4xl font-bold mb-4">
+          Proyectos
+        </h2>
+
+        <p class="text-slate-400">
+          Algunos de mis proyectos recientes
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- PROJECT -->
+        <div class="card rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300">
+
+          <div class="p-8">
+
+            <h3 class="text-2xl font-bold mb-4">
+              OCDS Data Extractor
+            </h3>
+
+            <p class="text-slate-400 mb-6 leading-relaxed">
+              Sistema de extracción y normalización de licitaciones públicas utilizando Python y PostgreSQL.
+            </p>
+
+            <div class="flex flex-wrap gap-3">
+
+              <div class="skill-badge">Python</div>
+              <div class="skill-badge">FastAPI</div>
+              <div class="skill-badge">PostgreSQL</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- PROJECT -->
+        <div class="card rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300">
+
+          <div class="p-8">
+
+            <h3 class="text-2xl font-bold mb-4">
+              Discord World Cup Bot
+            </h3>
+
+            <p class="text-slate-400 mb-6 leading-relaxed">
+              Bot de Discord desarrollado para automatización y seguimiento del mundial.
+            </p>
+
+            <div class="flex flex-wrap gap-3">
+
+              <div class="skill-badge">Python</div>
+              <div class="skill-badge">Discord.py</div>
+              <div class="skill-badge">APIs</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- PROJECT -->
+        <div class="card rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300">
+
+          <div class="p-8">
+
+            <h3 class="text-2xl font-bold mb-4">
+              API Backend
+            </h3>
+
+            <p class="text-slate-400 mb-6 leading-relaxed">
+              Backend escalable desarrollado con FastAPI y arquitectura REST.
+            </p>
+
+            <div class="flex flex-wrap gap-3">
+
+              <div class="skill-badge">FastAPI</div>
+              <div class="skill-badge">Docker</div>
+              <div class="skill-badge">JWT</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-24 px-6 bg-[#0f172a]">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+      <h2 class="text-5xl font-bold mb-6">
+        Trabajemos juntos
+      </h2>
+
+      <p class="text-slate-400 text-xl leading-relaxed mb-12">
+        Disponible para oportunidades backend, automatización y desarrollo Python.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-6">
+
+        <a
+          href="mailto:totorivetta@gmail.com"
+          class="px-8 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 transition font-semibold"
+        >
+          Enviar Email
+        </a>
+
+        <a
+          href="https://github.com/TomasRivetta"
+          target="_blank"
+          class="px-8 py-4 rounded-xl border border-slate-700 hover:border-sky-400 transition"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/tomasrivetta-fullstack/"
+          target="_blank"
+          class="px-8 py-4 rounded-xl border border-slate-700 hover:border-sky-400 transition"
+        >
+          LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 py-10 px-6">
+
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+
+      <p class="text-slate-500">
+        © 2026 Tomas Rivetta. Todos los derechos reservados.
+      </p>
+
+      <p class="text-slate-600">
+        Python Developer • Backend Engineer
+      </p>
+
+    </div>
+
   </footer>
 
-  <script defer src="js/main.js"></script>
-  <script defer src="js/projects.js"></script>
-  <script defer src="js/i18n.js"></script>
 </body>
 </html>
