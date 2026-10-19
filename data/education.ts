@@ -14,20 +14,20 @@ export const education: EducationItem[] = [
       en: "University Technical Degree in Programming",
     },
     institution: "Universidad Tecnológica Nacional – F.R.C.",
-    period: { es: "En curso", en: "In progress" },
+    period: { es: "Completado", en: "Completed" },
     desc: {
       es: "Córdoba, Argentina. Formación en desarrollo de software, algoritmos, estructuras de datos, bases de datos y desarrollo web full stack.",
       en: "Córdoba, Argentina. Training in software development, algorithms, data structures, databases and full stack web development.",
     },
   },
   {
-    id: "bachiller",
+    id: "ispc",
     title: {
-      es: "Bachiller en Ciencias Naturales",
-      en: "High School Diploma in Natural Sciences",
+      es: "Tecnico universitario en Ciencia de datos e Inteligencia Artificial",
+      en: "University Technician in Data Science and Artificial Intelligence",
     },
-    institution: "Instituto Parroquial Bernardo D'Elia",
-    period: { es: "Completado", en: "Completed" },
+    institution: "Instituto Superior Politécnico Córdoba - ISPC",
+    period: { es: "En Curso", en: "In Progress" },
     desc: {
       es: "Córdoba, Argentina.",
       en: "Córdoba, Argentina.",

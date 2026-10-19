@@ -93,7 +93,7 @@ export const dictionaries: Record<Lang, Dictionary> = {
     about: {
       title: "Sobre mí",
       subtitle: "Backend Developer orientado a automatización y procesamiento de datos",
-      p1: "Soy Python Developer y estudiante de la Tecnicatura Universitaria en Programación en la UTN FRC.",
+      p1: "Soy Python Developer, Técnico Universitario en Programación (UTN FRC) y estudiante de la Tecnicatura en Ciencia de Datos e Inteligencia Artificial en el ISPC.",
       p2: "Actualmente trabajo en B2Gov, desarrollando soluciones para procesamiento de datos gubernamentales y licitaciones públicas utilizando el estándar OCDS.",
       p3: "Trabajo diariamente construyendo scrapers, fetchers, APIs REST y pipelines de datos utilizando Python, FastAPI, PostgreSQL y Docker.",
       p4: "Me interesa especialmente backend engineering, arquitectura de software, data engineering y sistemas escalables.",
@@ -163,7 +163,7 @@ export const dictionaries: Record<Lang, Dictionary> = {
     about: {
       title: "About me",
       subtitle: "Backend Developer focused on automation and data processing",
-      p1: "I'm a Python Developer and student of the University Technical Degree in Programming at UTN FRC.",
+      p1: "I'm a Python Developer with a University Technical Degree in Programming (UTN FRC), currently studying Data Science and Artificial Intelligence at ISPC.",
       p2: "I currently work at B2Gov, building solutions for government data processing and public tenders using the OCDS standard.",
       p3: "I work daily building scrapers, fetchers, REST APIs and data pipelines using Python, FastAPI, PostgreSQL and Docker.",
       p4: "I'm especially interested in backend engineering, software architecture, data engineering and scalable systems.",

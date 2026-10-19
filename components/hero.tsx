@@ -9,70 +9,57 @@ export function Hero() {
   const { t } = useLang();
 
   return (
-    <section id="top" className="flex min-h-screen items-center px-6 pb-20 pt-32">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+    <section id="top" className="flex min-h-screen items-center px-6 pb-16 pt-28">
+      <div className="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-[1fr_260px]">
         <div>
           <Reveal>
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-4 py-2 text-sm text-sky-500 dark:text-sky-400">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-sky-400" />
-              {t.hero.badge}
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <h1 className="mb-8 text-5xl font-extrabold leading-tight lg:text-7xl">
-              {t.hero.greeting} <br />
-              <span className="gradient-text">{t.hero.role}</span>
+            <p className="mb-2 text-sm text-muted">
+              <span className="text-accent">$</span> whoami
+            </p>
+            <h1 className="mb-1 text-4xl font-bold leading-tight lg:text-5xl">
+              {t.hero.greeting}
             </h1>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <p className="mb-10 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400">
-              {t.hero.desc}
+            <p className="mb-8 text-xl text-accent cursor">
+              {t.hero.role} · {profile.location}
             </p>
           </Reveal>
 
-          <Reveal delay={0.3}>
-            <div className="mb-10 flex flex-wrap gap-4">
-              <a
-                href="#proyectos"
-                className="rounded-xl bg-sky-500 px-8 py-4 font-semibold text-white transition hover:bg-sky-400"
-              >
-                {t.hero.viewProjects}
-              </a>
-              <a
-                href={`mailto:${profile.email}`}
-                className="rounded-xl border border-slate-300 px-8 py-4 font-semibold transition hover:border-sky-400 dark:border-slate-700"
-              >
-                {t.hero.contactMe}
-              </a>
-            </div>
+          <Reveal delay={0.1}>
+            <p className="mb-2 text-sm text-muted">
+              <span className="text-accent">$</span> cat README.md
+            </p>
+            <p className="mb-8 max-w-xl leading-relaxed text-fg/80">{t.hero.desc}</p>
           </Reveal>
 
-          <Reveal delay={0.4}>
-            <div className="flex gap-6 text-slate-500 dark:text-slate-400">
-              <a href={profile.github} target="_blank" className="transition hover:text-primary">
-                GitHub
+          <Reveal delay={0.15}>
+            <p className="mb-2 text-sm text-muted">
+              <span className="text-accent">$</span> ls links/
+            </p>
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              <a href="#proyectos" className="hover:text-accent">
+                [{t.hero.viewProjects}]
               </a>
-              <a href={profile.linkedin} target="_blank" className="transition hover:text-primary">
-                LinkedIn
+              <a href={profile.github} target="_blank" rel="noreferrer" className="hover:text-accent">
+                [github]
               </a>
-              <a href={profile.cv} target="_blank" className="transition hover:text-primary">
-                {t.hero.downloadCV}
+              <a href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-accent">
+                [linkedin]
+              </a>
+              <a href={profile.cv} target="_blank" rel="noreferrer" className="hover:text-accent">
+                [{t.hero.downloadCV}]
               </a>
             </div>
           </Reveal>
         </div>
 
-        <Reveal delay={0.2} className="relative">
-          <div className="absolute inset-0 rounded-full bg-sky-500/20 blur-3xl" />
+        <Reveal delay={0.1}>
           <Image
             src="/assets/profile.webp"
             alt={profile.name}
-            width={640}
-            height={640}
+            width={520}
+            height={520}
             priority
-            className="relative rounded-3xl border border-slate-200 shadow-2xl shadow-sky-500/10 dark:border-slate-700 section-glow"
+            className="w-full border border-line grayscale transition hover:grayscale-0"
           />
         </Reveal>
       </div>

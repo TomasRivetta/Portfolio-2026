@@ -9,28 +9,26 @@ export function Skills() {
   const { t } = useLang();
 
   return (
-    <section id="skills" className="bg-slate-50 px-6 py-24 dark:bg-[#0f172a]">
-      <div className="mx-auto max-w-7xl">
-        <SectionHeading title={t.skills.title} subtitle={t.skills.subtitle} />
+    <section id="skills" className="px-6 py-20">
+      <div className="mx-auto max-w-5xl">
+        <SectionHeading cmd="ls stack/" title={t.skills.title} subtitle={t.skills.subtitle} />
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {skillGroups.map((group, i) => (
-            <Reveal key={group.key} delay={i * 0.08}>
-              <div className="card h-full rounded-2xl p-8">
-                <h3 className={`mb-6 text-2xl font-bold ${group.color}`}>
-                  {t.skills.groups[group.key as keyof typeof t.skills.groups]}
-                </h3>
-                <div className="flex flex-wrap gap-3">
+        <Reveal className="card p-6">
+          <dl className="space-y-4">
+            {skillGroups.map((group) => (
+              <div key={group.key} className="grid gap-1 md:grid-cols-[110px_1fr] md:gap-4">
+                <dt className="text-accent">
+                  {t.skills.groups[group.key as keyof typeof t.skills.groups].toLowerCase()}/
+                </dt>
+                <dd className="flex flex-wrap gap-x-4 gap-y-1 text-fg/80">
                   {group.items.map((item) => (
-                    <span key={item} className="skill-badge">
-                      {item}
-                    </span>
+                    <span key={item}>{item}</span>
                   ))}
-                </div>
+                </dd>
               </div>
-            </Reveal>
-          ))}
-        </div>
+            ))}
+          </dl>
+        </Reveal>
       </div>
     </section>
   );

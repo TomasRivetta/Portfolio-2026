@@ -9,9 +9,9 @@ export function LangToggle() {
     <button
       aria-label="Cambiar idioma"
       onClick={toggle}
-      className="rounded-full px-3 py-2 text-sm font-semibold text-slate-500 transition-colors hover:bg-slate-100 hover:text-primary dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white"
+      className="px-2 py-1 text-sm text-muted transition-colors hover:text-accent"
     >
-      {lang.toUpperCase()}
+      [{lang}]
     </button>
   );
 }

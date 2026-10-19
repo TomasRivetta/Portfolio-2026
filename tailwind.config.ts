@@ -6,23 +6,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#38bdf8",
-          dark: "#0ea5e9",
-        },
-        accent: "#8b5cf6",
+        bg: "rgb(var(--bg) / <alpha-value>)",
+        panel: "rgb(var(--panel) / <alpha-value>)",
+        fg: "rgb(var(--fg) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
+        line: "rgb(var(--line) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
-      },
-      animation: {
-        "fade-up": "fade-up 0.6s ease-out both",
-      },
-      keyframes: {
-        "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(16px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
+        sans: ["var(--font-mono)", "ui-monospace", "monospace"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
     },
   },

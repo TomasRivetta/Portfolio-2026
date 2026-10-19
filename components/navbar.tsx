@@ -1,9 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 import { useLang } from "@/lib/lang-context";
-import { profile } from "@/data/profile";
 import { ThemeToggle } from "./theme-toggle";
 import { LangToggle } from "./lang-toggle";
 
@@ -20,55 +18,51 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-slate-200/80 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-[#0b1120]/80">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a href="#top" className="text-xl font-bold">
-          {profile.name}
+    <header className="fixed top-0 z-50 w-full border-b border-line bg-bg/90 backdrop-blur">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
+        <a href="#top" className="text-sm font-bold">
+          <span className="text-accent">tomas@portfolio</span>
+          <span className="text-muted">:~$</span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm text-slate-600 dark:text-slate-300">
+        <nav className="hidden items-center gap-6 text-sm md:flex">
           {sections.map((s) => (
-            <a key={s.id} href={`#${s.id}`} className="transition hover:text-primary">
-              {t.nav[s.key]}
+            <a key={s.id} href={`#${s.id}`} className="text-muted transition hover:text-accent">
+              ./{t.nav[s.key].toLowerCase()}
             </a>
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden items-center md:flex">
           <LangToggle />
           <ThemeToggle />
-          <a
-            href="#contacto"
-            className="ml-3 rounded-xl bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-400"
-          >
-            {t.nav.cta}
-          </a>
         </div>
 
         <button
-          className="p-2 md:hidden"
+          className="px-2 py-1 text-sm text-muted md:hidden"
           aria-label="Abrir menú"
+          aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          [{open ? "x" : "menu"}]
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-slate-200 bg-white px-6 py-4 dark:border-slate-800 dark:bg-[#0b1120] md:hidden">
-          <nav className="flex flex-col gap-4 text-slate-600 dark:text-slate-300">
+        <div className="border-t border-line bg-bg px-6 py-4 md:hidden">
+          <nav className="flex flex-col gap-3 text-sm">
             {sections.map((s) => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
                 onClick={() => setOpen(false)}
-                className="transition hover:text-primary"
+                className="text-muted transition hover:text-accent"
               >
-                {t.nav[s.key]}
+                ./{t.nav[s.key].toLowerCase()}
               </a>
             ))}
           </nav>
-          <div className="mt-4 flex items-center gap-2">
+          <div className="mt-4 flex items-center">
             <LangToggle />
             <ThemeToggle />
           </div>
