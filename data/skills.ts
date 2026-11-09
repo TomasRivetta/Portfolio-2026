@@ -8,12 +8,12 @@ export const skillGroups: SkillGroup[] = [
   {
     key: "backend",
     color: "text-sky-400",
-    items: ["Python", "FastAPI", "Django", "Flask", "REST APIs", "Pytest"],
+    items: ["Python", "FastAPI", "Django", "Flask", "C#", ".NET", "Windows Forms", "Java", "Spring Boot", "REST APIs"],
   },
   {
     key: "data",
     color: "text-emerald-400",
-    items: ["PostgreSQL", "MongoDB", "Pandas", "ETL", "Web Scraping", "OCDS"],
+    items: ["PostgreSQL", "SQL Server", "MongoDB", "Pandas", "ETL", "Web Scraping", "OCDS"],
   },
   {
     key: "devops",
@@ -23,6 +23,16 @@ export const skillGroups: SkillGroup[] = [
   {
     key: "frontend",
     color: "text-violet-400",
-    items: ["React", "Angular", "TypeScript", "Tailwind CSS"],
+    items: ["React", "Angular", "TypeScript", "Astro", "WordPress", "Tailwind CSS"],
+  },
+  {
+    key: "testing",
+    color: "text-rose-400",
+    items: ["Pytest", "JUnit", "Mockito"],
+  },
+  {
+    key: "tools",
+    color: "text-amber-400",
+    items: ["Jira", "ClickUp", "Scrum", "Kanban"],
   },
 ];

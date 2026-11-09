@@ -20,17 +20,18 @@ export const education: EducationItem[] = [
       en: "Córdoba, Argentina. Training in software development, algorithms, data structures, databases and full stack web development.",
     },
   },
-  {
-    id: "ispc",
-    title: {
-      es: "Tecnico universitario en Ciencia de datos e Inteligencia Artificial",
-      en: "University Technician in Data Science and Artificial Intelligence",
-    },
-    institution: "Instituto Superior Politécnico Córdoba - ISPC",
-    period: { es: "En Curso", en: "In Progress" },
-    desc: {
-      es: "Córdoba, Argentina.",
-      en: "Córdoba, Argentina.",
-    },
-  },
+  // TODO: descomentar cuando curse la Tecnicatura en Ciencia de Datos e IA (ISPC)
+  // {
+  //   id: "ispc",
+  //   title: {
+  //     es: "Tecnico universitario en Ciencia de datos e Inteligencia Artificial",
+  //     en: "University Technician in Data Science and Artificial Intelligence",
+  //   },
+  //   institution: "Instituto Superior Politécnico Córdoba - ISPC",
+  //   period: { es: "En Curso", en: "In Progress" },
+  //   desc: {
+  //     es: "Córdoba, Argentina.",
+  //     en: "Córdoba, Argentina.",
+  //   },
+  // },
 ];
